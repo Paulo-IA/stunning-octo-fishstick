@@ -27,6 +27,8 @@ public class Task {
     public String description;
     public Date start_date;
     public Date end_date;
+
+    @Enumerated(EnumType.ORDINAL)
     public State state;
 
     @ManyToOne
