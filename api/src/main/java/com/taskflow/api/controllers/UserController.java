@@ -31,7 +31,8 @@ public class UserController {
     }
 
     @GetMapping
-    public ResponseEntity<List<UserResponseDTO>> getUsers(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "20") int size) {
+    public ResponseEntity<List<UserResponseDTO>> getUsers(@RequestParam(defaultValue = "0") int page,
+                                                          @RequestParam(defaultValue = "20") int size) {
         List<UserResponseDTO> allUsers = userService.getUsers(page, size);
 
         return ResponseEntity.ok(allUsers);
